@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.13",
+  "version": "1.0.0",
+  "id": "YOUR-APP-ID",
+  "packageName": "com.localbot.test",
+  "name": {
+    "short": "LocalBot",
+    "full": "Python Local Bot"
+  },
+  "description": {
+    "short": "A local Python bot",
+    "full": "This is a Python bot running locally and tested in Microsoft Teams."
+  },
+  "bots": [
+    {
+      "botId": "YOUR-APP-ID",
+      "scopes": ["personal", "team"],
+      "commandLists": [
+        {
+          "scopes": ["personal"],
+          "commands": [
+            {
+              "title": "hello",
+              "description": "Say hello"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": [
+    "abcd1234.ngrok.io"
+  ]
+}
